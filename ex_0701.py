@@ -40,7 +40,7 @@ def n_step_TD(env, n, alpha, gamma=1.0, num_episodes=10):
     true_values[0] = true_values[-1] = 0
     rms_errors = []
 
-    for _ in range(num_episodes):
+    for episode in range(num_episodes):
         # 초기 상태 설정
         state = env.reset()
         states = [state]
